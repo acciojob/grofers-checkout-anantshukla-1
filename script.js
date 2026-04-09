@@ -19,14 +19,13 @@ const getSum = () => {
 	let existingTotal = document.querySelector('#total-row');
 	if(existingTotal) {
 		existingTotal.remove(); 
-	    console.log("Updated existing row");
 	};
 	
 	const newRow = document.createElement('tr');
-	newRow.id = 'total-row';
 	const newCell = document.createElement('td');
+	newRow.setAttribute('id' , 'total-row');
 
-	newCell.textContent = `Total Price: ${totalPrice}`;
+	newCell.textContent = totalPrice;
 	newCell.setAttribute('colspan' , '2');
 	newCell.style.fontWeight = 'bold';
 
