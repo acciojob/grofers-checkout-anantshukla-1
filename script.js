@@ -16,16 +16,18 @@ const getSum = () => {
 	});
 
 	const table = document.querySelector('table');
-	let existingTotal = document.querySelector('#total-row');
+	let existingTotal = document.querySelector('#ans-row');
 	if(existingTotal) {
 		existingTotal.remove(); 
 	};
 	
 	const newRow = document.createElement('tr');
+	newRow.id = 'ans-row';
 	const newCell = document.createElement('td');
-	newRow.setAttribute('id' , 'total-row');
+	newCell.id = 'ans';
 
 	newCell.textContent = totalPrice;
+	
 	newCell.setAttribute('colspan' , '2');
 	newCell.style.fontWeight = 'bold';
 
